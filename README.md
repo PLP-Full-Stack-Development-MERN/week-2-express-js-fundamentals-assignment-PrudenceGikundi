@@ -92,3 +92,117 @@
 - Detailed documentation with clear instructions.
 - Successful testing of all endpoints.
 
+
+
+
+
+
+
+
+
+# ANSWERS
+# Express.js Fundamentals Assignment
+
+## Objective
+- Apply Express.js concepts learned throughout the week.
+- Develop hands-on experience with creating routes, middleware, and API endpoints.
+- Understand and implement RESTful APIs.
+
+## Instructions
+
+### Step 1: Setup Express.js Project
+1. **Install Node.js using NVM** (if not already installed).
+2. **Create a new project folder**:
+   ```sh
+   mkdir express-assignment && cd express-assignment
+   ```
+3. **Initialize a Node.js project**:
+   ```sh
+   npm init -y
+   ```
+4. **Install necessary dependencies**:
+   ```sh
+   npm install express dotenv
+   ```
+
+### Step 2: Project Structure
+Organize your project with the following structure:
+```
+express-assignment/
+│-- routes/
+│    ├── userRoutes.js
+│    ├── productRoutes.js
+│-- middleware/
+│    ├── logger.js
+│-- controllers/
+│    ├── userController.js
+│    ├── productController.js
+│-- index.js
+│-- package.json
+│-- README.md
+│-- .env
+```
+
+### Step 3: Create Routes
+- Define RESTful routes for users and products in `routes/userRoutes.js` and `routes/productRoutes.js`.
+- Implement **GET, POST, PUT, DELETE** methods.
+- Utilize route parameters and query strings correctly.
+
+### Step 4: Implement Middleware
+- Create a custom logging middleware in `middleware/logger.js` that logs request details (method, URL, timestamp).
+- Apply the middleware globally to all routes.
+
+### Step 5: Develop Controllers
+- Implement business logic in `controllers/userController.js` and `controllers/productController.js`.
+- Handle different types of requests and responses efficiently.
+
+### Step 6: Environment Variables
+- Use `dotenv` to manage environment variables.
+- Define `PORT` in the `.env` file:
+  ```sh
+  PORT=3000
+  ```
+- Access variables in `index.js`:
+  ```js
+  require('dotenv').config();
+  const port = process.env.PORT || 3000;
+  ```
+
+### Step 7: Error Handling
+- Implement global error-handling middleware to catch and respond to errors gracefully.
+
+### Step 8: Testing
+- Start the server:
+  ```sh
+  node index.js
+  ```
+- Use **Postman** or **cURL** to test API endpoints.
+  ```sh
+  curl -X GET http://localhost:3000/users
+  ```
+
+### Step 9: Documentation
+- Add API endpoint descriptions in the `README.md`:
+  - **GET /users** - Retrieve all users.
+  - **POST /users** - Create a new user.
+  - **PUT /users/:id** - Update a user.
+  - **DELETE /users/:id** - Delete a user.
+  - **GET /products** - Retrieve all products.
+  - **POST /products** - Add a new product.
+  - **PUT /products/:id** - Update a product.
+  - **DELETE /products/:id** - Remove a product.
+
+### Step 10: Submission
+- Push your project to **GitHub**:
+  ```sh
+  git init
+  git add .
+  git commit -m "Initial commit"
+  git branch -M main
+  git remote add origin <your-repository-url>
+  git push -u origin main
+  ```
+
+
+
+
